@@ -7,6 +7,30 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+
+
+    //My First Solution
+    // const reversedString = str.split('').reduce((reversed, character) => {
+    //     return character + reversed;
+    // });
+    
+    // if(str === reversedString ){
+    //     return true
+    // }
+
+    //My Second Solution
+    // const reversed = str.split('').reverse().join('');
+    // if(str === reversed){
+    //     return true
+    // }
+    // return false
+
+    //Third Solution, learned online
+    //not a vaiable solution due to the simple fact that it compares both begging and end all the way through the middle
+    // return str.split('').every((character, i) => {
+    //     return character == str[str.length -i -1];
+    // });
+}
 
 module.exports = palindrome;
