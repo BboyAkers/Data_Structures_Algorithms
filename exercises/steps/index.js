@@ -17,22 +17,39 @@
 //       '### '
 //       '####'
 
-function steps(n) {
-    
-    //My first solution
-    for(let row = 0; row < n; row++){
-        let stair = '';
+function steps(n, row = 0, stair= '') {
+    //My second solution
+     if(n === row){
+         return;
+     }
+     if(n === StaticRange.length){
+         console.log(stair)
+         steps(n, row + 1);
+     }
 
-        for(let column = 0; column < n; column++) {
-            if(column <= row){
-                stair += '#';
-            }
-            else {
-                stair += ' ';
-            }
-        }
-        console.log(stair);
-    }
+     if(stair.length <= row) {
+         stair += '#';
+     }
+     else {
+         stair += ' ';
+     }
+     steps(n, row, stair);
+
+
+    //My first solution
+    // for(let row = 0; row < n; row++){
+    //     let stair = '';
+
+    //     for(let column = 0; column < n; column++) {
+    //         if(column <= row){
+    //             stair += '#';
+    //         }
+    //         else {
+    //             stair += ' ';
+    //         }
+    //     }
+    //     console.log(stair);
+    // }
 }
 
 module.exports = steps;
