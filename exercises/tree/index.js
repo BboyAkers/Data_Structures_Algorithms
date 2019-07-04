@@ -28,7 +28,6 @@ class Node {
 class Tree {
     constructor() {
         this.root = null;
-          
     }
     traverseBF(fn){
         //creating top node
