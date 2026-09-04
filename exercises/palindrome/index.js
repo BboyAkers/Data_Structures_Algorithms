@@ -11,13 +11,13 @@ function palindrome(str) {
 
 
     //My First Solution
-    // const reversedString = str.split('').reduce((reversed, character) => {
-    //     return character + reversed;
-    // });
-    
-    // if(str === reversedString ){
-    //     return true
-    // }
+    const reversedString = str.split('').reduce((reversed, character) => {
+        return character + reversed;
+    });
+
+    if (str === reversedString) {
+        return true
+    }
 
     //My Second Solution
     // const reversed = str.split('').reverse().join('');

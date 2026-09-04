@@ -9,18 +9,18 @@
 function reverse(str) {
     //My First Solution
     // return str.split('').reverse().join('');
-   
+
     //My Second Solution
-    // let reversedArray = '';
-    // for( let character of str){
-    //     reversedArray = character + reversed;
+    // let reversedString = '';
+    // for (let character of str) {
+    //     reversedString = character + reversedString;
     // }
-    // return reversedArray;
+    // return reversedString;
 
     //My Third Solution
-    str.split('').reduce((reversed, character) => {
+    return str.split('').reduce((reversed, character) => {
         return character + reversed;
-    }, '')
+    }, '');
 }
 
 module.exports = reverse;
